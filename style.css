@@ -42,7 +42,7 @@ body {
   font-size: 1.2em;
 }
 .navbar a:hover {
-  color: var(--negro);
+  color: var(--azul);
 }
 /* SECCIONES */
 .section {
@@ -61,7 +61,7 @@ body {
 .section h2::after {
   content: "";
   display: block;
-  width: 80px;
+  width: 320px;
   height: 3px;
   background-color: var(--rosa-pastel);
   margin: 10px auto 0;
@@ -95,16 +95,16 @@ body {
   color: var(--blanco);
   border: none;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
   cursor: pointer;
   display: none;
   transition: background-color 0.3s, transform 0.2s;
 }
 #toTop:hover {
-  background-color: var(--negro);
-  transform: scale(1.1);
+  background-color: var(--azul);
+  transform: scale(2.2);
 }
 /* =========  MENÚ HAMBURGUESA Y RESPONSIVE ========= */
 .menu-toggle {
