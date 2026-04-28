@@ -159,6 +159,15 @@
           </div>
         </div>
       </div>
+      <div class="project-card" onclick="openModal('modeling', 5)">
+        <div class="project-cover">
+          <img src="images/modeling/project6/cover.jpg" alt="Chair" />
+          <div class="project-overlay">
+            <span class="project-title-hover">Chair</span>
+            <span class="view-label">View Project</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -236,21 +245,45 @@
 
   <!-- CONTACT -->
   <section id="contact" class="section section-alt">
-    <div class="section-header">
-      <h2>Contact</h2>
-    </div>
-    <div class="contact-simple">
-      <p class="contact-tagline">Let's work together!</p>
-      <a href="mailto:TU_EMAIL" class="contact-email">TU_EMAIL</a>
-      <div class="contact-links">
-        <a href="https://www.linkedin.com/in/TU_LINKEDIN" target="_blank" class="contact-link">
-          <span class="contact-icon">in</span>
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://www.youtube.com/@TU_YOUTUBE" target="_blank" class="contact-link">
-          <span class="contact-icon">yt</span>
-          <span>YouTube</span>
-        </a>
+    <div class="contact-wrapper">
+      <div class="contact-left">
+        <span class="contact-mail-icon">✉</span>
+        <p class="contact-tagline">For commissions and project inquiries, please email:</p>
+        <a href="mailto:c.naval23@voxelschool.com" class="contact-email">c.naval23@voxelschool.com</a>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/claudia-naval" target="_blank" class="contact-link">
+            <span class="contact-icon">in</span>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://youtube.com/@claudianavalmoran" target="_blank" class="contact-link">
+            <span class="contact-icon">yt</span>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <h2>Contact</h2>
+        <form class="contact-form" action="https://formspree.io/f/TU_FORMSPREE_ID" method="POST">
+          <div class="contact-form-row">
+            <div class="contact-form-group">
+              <label>First Name</label>
+              <input type="text" name="first_name" required />
+            </div>
+            <div class="contact-form-group">
+              <label>Last Name</label>
+              <input type="text" name="last_name" required />
+            </div>
+          </div>
+          <div class="contact-form-group">
+            <label>Email *</label>
+            <input type="email" name="email" required />
+          </div>
+          <div class="contact-form-group">
+            <label>Write a message</label>
+            <textarea name="message" rows="4"></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
   </section>
