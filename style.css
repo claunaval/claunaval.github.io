@@ -2,8 +2,8 @@
   --fucsia: #ff1493;
   --rosa-pastel: #ffd1e8;
   --blanco: #ffffff;
-  --negro: #000000;
   --azul: #14d8ff;
+  --negro: #000000;
 }
 html {
   scroll-behavior: smooth;
@@ -37,13 +37,16 @@ body {
   color: var(--blanco);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s;
   letter-spacing: 1.5px;
   padding: 0 15px;
   font-size: 1.2em;
+  display: inline-block;
 }
 .navbar a:hover {
   color: var(--azul);
+  transform: scale(1.1);
+  letter-spacing: 2px;
 }
 /* SECCIONES */
 .section {
@@ -67,66 +70,6 @@ body {
   background-color: var(--rosa-pastel);
   margin: 10px auto 0;
   border-radius: 2px;
-}
-/* =========================
-   PROJECT GRID (PORTFOLIO)
-   ========================= */
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-top: 20px;
-}
-
-/* =========================
-   PROJECT COVER (IMAGES)
-   ========================= */
-
-.project-cover {
-  position: relative;
-  overflow: hidden;
-  border-radius: 6px;
-}
-
-.project-cover img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-/* Hover effect */
-.project-card:hover img {
-  transform: scale(1.05);
-}
-
-/* =========================
-   PROJECT TITLE
-   ========================= */
-
-.project-title {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 1em;
-  letter-spacing: 0.5px;
-}
-
-/* =========================
-   RESPONSIVE GRID
-   ========================= */
-
-@media (max-width: 900px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
 }
 /* BANNER */
 .banner {
@@ -161,11 +104,12 @@ body {
   font-size: 30px;
   cursor: pointer;
   display: none;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 #toTop:hover {
   background-color: var(--azul);
   transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 /* =========  MENÚ HAMBURGUESA Y RESPONSIVE ========= */
 .menu-toggle {
