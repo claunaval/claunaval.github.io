@@ -240,64 +240,42 @@ body {
 }
 
 /* ── CONTACT ── */
-.contact-wrapper {
-  display: flex;
-  gap: 60px;
-  max-width: 900px;
-  margin: 0 auto;
-  align-items: flex-start;
-}
-.contact-form {
-  flex: 1;
+.contact-simple {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
 }
-.contact-form input,
-.contact-form textarea {
-  padding: 14px 16px;
-  border: 2px solid var(--rosa-pastel);
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 0.95em;
-  outline: none;
-  transition: border-color 0.3s;
-  background: var(--blanco);
-}
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: var(--fucsia);
-}
-.contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-.contact-form button {
-  padding: 14px;
-  background: var(--fucsia);
-  color: var(--blanco);
-  border: none;
-  border-radius: 8px;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
+.contact-tagline {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: var(--fucsia);
+  margin: 0;
   letter-spacing: 1px;
-  transition: background 0.3s, transform 0.2s;
 }
-.contact-form button:hover {
-  background: var(--azul);
-  transform: scale(1.02);
+.contact-email {
+  font-size: 1.1em;
+  color: var(--negro);
+  text-decoration: none;
+  border-bottom: 2px solid var(--rosa-pastel);
+  padding-bottom: 2px;
+  transition: border-color 0.3s, color 0.3s;
+}
+.contact-email:hover {
+  color: var(--fucsia);
+  border-color: var(--fucsia);
 }
 .contact-links {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: row;
+  gap: 24px;
   padding-top: 8px;
 }
 .contact-link {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   text-decoration: none;
   color: var(--negro);
   font-size: 1em;
@@ -320,6 +298,10 @@ body {
   font-size: 0.85em;
   text-transform: uppercase;
   flex-shrink: 0;
+  transition: background 0.3s;
+}
+.contact-link:hover .contact-icon {
+  background: var(--azul);
 }
 
 /* ── BOTÓN VOLVER ARRIBA ── */
