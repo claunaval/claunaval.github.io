@@ -10,7 +10,10 @@ const projectData = {
       images: [
         "images/concept/project1/cover.jpg",
         "images/concept/project1/img2.jpg",
-        "images/concept/project1/img3.jpg"
+        "images/concept/project1/img3.jpg",
+        "images/concept/project1/img4.jpg",
+        "images/concept/project1/img5.jpg",
+        "images/concept/project1/img6.jpg"
       ]
     },
     {
@@ -18,15 +21,15 @@ const projectData = {
       images: [
         "images/concept/project2/cover.jpg",
         "images/concept/project2/img2.jpg",
-        "images/concept/project2/img3.jpg"
+        "images/concept/project2/img3.jpg", 
+        "images/concept/project1/img4.jpg"
       ]
     },
     {
       title: '"Retro Future Lab"',
       images: [
         "images/concept/project3/cover.jpg",
-        "images/concept/project3/img2.jpg",
-        "images/concept/project3/img3.jpg"
+        "images/concept/project3/img2.jpg"
       ]
     },
     {
@@ -34,15 +37,15 @@ const projectData = {
       images: [
         "images/concept/project4/cover.jpg",
         "images/concept/project4/img2.jpg",
-        "images/concept/project4/img3.jpg"
+        "images/concept/project4/img3.jpg", 
+        "images/concept/project1/img4.jpg"
       ]
     },
     {
       title: '"Universo"',
       images: [
         "images/concept/project5/cover.jpg",
-        "images/concept/project5/img2.jpg",
-        "images/concept/project5/img3.jpg"
+        "images/concept/project5/img2.jpg"
       ]
     }
   ],
@@ -52,31 +55,26 @@ const projectData = {
       images: [
         "images/modeling/project1/cover.jpg",
         "images/modeling/project1/img2.jpg",
-        "images/modeling/project1/img3.jpg"
+        "images/modeling/project1/img3.jpg", 
+        "images/concept/project1/img4.jpg"
       ]
     },
     {
       title: "CCTV",
       images: [
-        "images/modeling/project2/cover.jpg",
-        "images/modeling/project2/img2.jpg",
-        "images/modeling/project2/img3.jpg"
+        "images/modeling/project2/cover.jpg"
       ]
     },
     {
       title: "Love potion",
       images: [
-        "images/modeling/project3/cover.jpg",
-        "images/modeling/project3/img2.jpg",
-        "images/modeling/project3/img3.jpg"
+        "images/modeling/project3/cover.jpg"
       ]
     },
     {
       title: "Halloween pumpkin",
       images: [
-        "images/modeling/project4/cover.jpg",
-        "images/modeling/project4/img2.jpg",
-        "images/modeling/project4/img3.jpg"
+        "images/modeling/project4/cover.jpg"
       ]
     },
     {
@@ -87,14 +85,6 @@ const projectData = {
         "images/modeling/project5/img3.jpg"
       ]
     },
-    {
-      title: "Chair",
-      images: [
-        "images/modeling/project6/cover.jpg",
-        "images/modeling/project6/img2.jpg",
-        "images/modeling/project6/img3.jpg"
-      ]
-    }
   ],
   drawing: [
     {
@@ -102,15 +92,18 @@ const projectData = {
       images: [
         "images/drawing/project1/cover.jpg",
         "images/drawing/project1/img2.jpg",
-        "images/drawing/project1/img3.jpg"
+        "images/drawing/project1/img3.jpg",
+        "images/concept/project1/img4.jpg",
+        "images/concept/project1/img5.jpg",
+        "images/concept/project1/img6.jpg",
+        "images/concept/project1/img7.jpg"
       ]
     },
     {
       title: "Storyboard",
       images: [
         "images/drawing/project2/cover.jpg",
-        "images/drawing/project2/img2.jpg",
-        "images/drawing/project2/img3.jpg"
+        "images/drawing/project2/img2.jpg"
       ]
     },
     {
@@ -118,7 +111,23 @@ const projectData = {
       images: [
         "images/drawing/project3/cover.jpg",
         "images/drawing/project3/img2.jpg",
-        "images/drawing/project3/img3.jpg"
+        "images/drawing/project3/img3.jpg", 
+        "images/concept/project1/img4.jpg",
+        "images/concept/project1/img5.jpg",
+        "images/concept/project1/img6.jpg",
+        "images/concept/project1/img7.jpg",
+        "images/concept/project1/img8.jpg",
+        "images/concept/project1/img9.jpg",
+        "images/concept/project1/img10.jpg",
+        "images/concept/project1/img11.jpg",
+        "images/concept/project1/img12.jpg",
+        "images/concept/project1/img13.jpg",
+        "images/concept/project1/img14.jpg",
+        "images/concept/project1/img15.jpg",
+        "images/concept/project1/img16.jpg",
+        "images/concept/project1/img17.jpg",
+        "images/concept/project1/img18.jpg",
+        "images/concept/project1/img19.jpg"
       ]
     },
     {
@@ -126,7 +135,13 @@ const projectData = {
       images: [
         "images/drawing/project4/cover.jpg",
         "images/drawing/project4/img2.jpg",
-        "images/drawing/project4/img3.jpg"
+        "images/drawing/project4/img3.jpg", 
+        "images/concept/project1/img4.jpg",
+        "images/concept/project1/img5.jpg",
+        "images/concept/project1/img6.jpg",
+        "images/concept/project1/img7.jpg",
+        "images/concept/project1/img8.jpg",
+        "images/concept/project1/img9.jpg"
       ]
     },
     {
@@ -134,7 +149,12 @@ const projectData = {
       images: [
         "images/drawing/project5/cover.jpg",
         "images/drawing/project5/img2.jpg",
-        "images/drawing/project5/img3.jpg"
+        "images/drawing/project5/img3.jpg",
+        "images/concept/project1/img4.jpg",
+        "images/concept/project1/img5.jpg",
+        "images/concept/project1/img6.jpg",
+        "images/concept/project1/img7.jpg",
+        "images/concept/project1/img8.jpg"
       ]
     }
   ]
