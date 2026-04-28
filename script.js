@@ -56,7 +56,7 @@ const projectData = {
         "images/modeling/project1/cover.jpg",
         "images/modeling/project1/img2.jpg",
         "images/modeling/project1/img3.jpg", 
-        "images/concept/project1/img4.jpg"
+        "images/modeling/project1/img4.jpg"
       ]
     },
     {
@@ -93,10 +93,10 @@ const projectData = {
         "images/drawing/project1/cover.jpg",
         "images/drawing/project1/img2.jpg",
         "images/drawing/project1/img3.jpg",
-        "images/concept/project1/img4.jpg",
-        "images/concept/project1/img5.jpg",
-        "images/concept/project1/img6.jpg",
-        "images/concept/project1/img7.jpg"
+        "images/drawing/project1/img4.jpg",
+        "images/drawing/project1/img5.jpg",
+        "images/drawing/project1/img6.jpg",
+        "images/drawing/project1/img7.jpg"
       ]
     },
     {
@@ -112,22 +112,22 @@ const projectData = {
         "images/drawing/project3/cover.jpg",
         "images/drawing/project3/img2.jpg",
         "images/drawing/project3/img3.jpg", 
-        "images/concept/project3/img4.jpg",
-        "images/concept/project3/img5.jpg",
-        "images/concept/project3/img6.jpg",
-        "images/concept/project3/img7.jpg",
-        "images/concept/project3/img8.jpg",
-        "images/concept/project3/img9.jpg",
-        "images/concept/project3/img10.jpg",
-        "images/concept/project3/img11.jpg",
-        "images/concept/project3/img12.jpg",
-        "images/concept/project3/img13.jpg",
-        "images/concept/project3/img14.jpg",
-        "images/concept/project3/img15.jpg",
-        "images/concept/project3/img16.jpg",
-        "images/concept/project3/img17.jpg",
-        "images/concept/project3/img18.jpg",
-        "images/concept/project3/img19.jpg"
+        "images/drawing/project3/img4.jpg",
+        "images/drawing/project3/img5.jpg",
+        "images/drawing/project3/img6.jpg",
+        "images/drawing/project3/img7.jpg",
+        "images/drawing/project3/img8.jpg",
+        "images/drawing/project3/img9.jpg",
+        "images/drawing/project3/img10.jpg",
+        "images/drawing/project3/img11.jpg",
+        "images/drawing/project3/img12.jpg",
+        "images/drawing/project3/img13.jpg",
+        "images/drawing/project3/img14.jpg",
+        "images/drawing/project3/img15.jpg",
+        "images/drawing/project3/img16.jpg",
+        "images/drawing/project3/img17.jpg",
+        "images/drawing/project3/img18.jpg",
+        "images/drawing/project3/img19.jpg"
       ]
     },
     {
@@ -136,12 +136,12 @@ const projectData = {
         "images/drawing/project4/cover.jpg",
         "images/drawing/project4/img2.jpg",
         "images/drawing/project4/img3.jpg", 
-        "images/concept/project4/img4.jpg",
-        "images/concept/project4/img5.jpg",
-        "images/concept/project4/img6.jpg",
-        "images/concept/project4/img7.jpg",
-        "images/concept/project4/img8.jpg",
-        "images/concept/project4/img9.jpg"
+        "images/drawing/project4/img4.jpg",
+        "images/drawing/project4/img5.jpg",
+        "images/drawing/project4/img6.jpg",
+        "images/drawing/project4/img7.jpg",
+        "images/drawing/project4/img8.jpg",
+        "images/drawing/project4/img9.jpg"
       ]
     },
     {
@@ -150,11 +150,11 @@ const projectData = {
         "images/drawing/project5/cover.jpg",
         "images/drawing/project5/img2.jpg",
         "images/drawing/project5/img3.jpg",
-        "images/concept/project5/img4.jpg",
-        "images/concept/project5/img5.jpg",
-        "images/concept/project5/img6.jpg",
-        "images/concept/project5/img7.jpg",
-        "images/concept/project5/img8.jpg"
+        "images/drawing/project5/img4.jpg",
+        "images/drawing/project5/img5.jpg",
+        "images/drawing/project5/img6.jpg",
+        "images/drawing/project5/img7.jpg",
+        "images/drawing/project5/img8.jpg"
       ]
     }
   ]
