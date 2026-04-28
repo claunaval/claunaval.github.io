@@ -3,6 +3,7 @@
   --rosa-pastel: #ffd1e8;
   --blanco: #ffffff;
   --negro: #000000;
+  --azul: #14d8ff;
 }
 html {
   scroll-behavior: smooth;
@@ -67,6 +68,66 @@ body {
   margin: 10px auto 0;
   border-radius: 2px;
 }
+/* =========================
+   PROJECT GRID (PORTFOLIO)
+   ========================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* =========================
+   PROJECT COVER (IMAGES)
+   ========================= */
+
+.project-cover {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.project-cover img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect */
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* =========================
+   PROJECT TITLE
+   ========================= */
+
+.project-title {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   RESPONSIVE GRID
+   ========================= */
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
 /* BANNER */
 .banner {
   display: flex;
@@ -104,7 +165,7 @@ body {
 }
 #toTop:hover {
   background-color: var(--azul);
-  transform: scale(2.2);
+  transform: scale(1.1);
 }
 /* =========  MENÚ HAMBURGUESA Y RESPONSIVE ========= */
 .menu-toggle {
