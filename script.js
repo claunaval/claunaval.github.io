@@ -1,7 +1,6 @@
 // ── DATOS DE LOS PROYECTOS ──
-// Para añadir imágenes a cada proyecto, agrega las rutas en el array "images".
-// La primera imagen de cada array es la portada (cover).
-// Puedes añadir o quitar imágenes simplemente editando estos arrays.
+// Para vídeos, añade la ruta del .mp4 en el array de imágenes donde quieras que aparezca.
+// El modal detecta automáticamente si es vídeo o imagen.
 
 const projectData = {
   concept: [
@@ -14,7 +13,7 @@ const projectData = {
         "images/concept/project1/img4.jpg",
         "images/concept/project1/img5.jpg",
         "images/concept/project1/img6.jpg",
-        "images/concept/project1/img7.jpg", 
+        "images/concept/project1/img7.jpg",
         "images/concept/project1/img8.jpg"
       ]
     },
@@ -25,7 +24,7 @@ const projectData = {
         "images/concept/project2/img5.jpg",
         "images/concept/project2/img6.jpg",
         "images/concept/project2/img3.jpg",
-        "images/concept/project2/img2.jpg", 
+        "images/concept/project2/img2.jpg",
         "images/concept/project2/img4.jpg"
       ]
     },
@@ -41,7 +40,7 @@ const projectData = {
       images: [
         "images/concept/project4/cover.jpg",
         "images/concept/project4/img2.jpg",
-        "images/concept/project4/img3.jpg", 
+        "images/concept/project4/img3.jpg",
         "images/concept/project4/img4.jpg"
       ]
     },
@@ -58,8 +57,9 @@ const projectData = {
       title: "Ramen stall",
       images: [
         "images/modeling/project1/cover.jpg",
+        "images/modeling/project1/video.mp4",
         "images/modeling/project1/img2.jpg",
-        "images/modeling/project1/img3.jpg", 
+        "images/modeling/project1/img3.jpg",
         "images/modeling/project1/img5.jpg",
         "images/modeling/project1/img6.jpg",
         "images/modeling/project1/img7.jpg",
@@ -71,29 +71,33 @@ const projectData = {
     {
       title: "CCTV",
       images: [
-        "images/modeling/project2/cover.jpg"
+        "images/modeling/project2/cover.jpg",
+        "images/modeling/project2/video.mp4"
       ]
     },
     {
       title: "Love potion",
       images: [
-        "images/modeling/project3/cover.jpg"
+        "images/modeling/project3/cover.jpg",
+        "images/modeling/project3/video.mp4"
       ]
     },
     {
       title: "Halloween pumpkin",
       images: [
-        "images/modeling/project4/cover.jpg"
+        "images/modeling/project4/cover.jpg",
+        "images/modeling/project4/video.mp4"
       ]
     },
     {
       title: "Barriletes",
       images: [
         "images/modeling/project5/cover.jpg",
+        "images/modeling/project5/video.mp4",
         "images/modeling/project5/img2.jpg",
         "images/modeling/project5/img3.jpg"
       ]
-    },
+    }
   ],
   drawing: [
     {
@@ -120,7 +124,7 @@ const projectData = {
       images: [
         "images/drawing/project3/cover.jpg",
         "images/drawing/project3/img2.jpg",
-        "images/drawing/project3/img3.jpg", 
+        "images/drawing/project3/img3.jpg",
         "images/drawing/project3/img4.jpg",
         "images/drawing/project3/img5.jpg",
         "images/drawing/project3/img6.jpg",
@@ -144,7 +148,7 @@ const projectData = {
       images: [
         "images/drawing/project4/cover.jpg",
         "images/drawing/project4/img2.jpg",
-        "images/drawing/project4/img3.jpg", 
+        "images/drawing/project4/img3.jpg",
         "images/drawing/project4/img4.jpg",
         "images/drawing/project4/img5.jpg",
         "images/drawing/project4/img6.jpg",
@@ -173,37 +177,54 @@ const projectData = {
 let currentImages = [];
 let currentIndex = 0;
 
+function isVideo(src) {
+  return src.match(/\.(mp4|webm|ogg)$/i);
+}
+
 function openModal(category, projectIndex) {
   const project = projectData[category][projectIndex];
   currentImages = project.images;
   currentIndex = 0;
-
   renderModal();
-
   const modal = document.getElementById("modal");
   modal.classList.add("open");
   document.body.style.overflow = "hidden";
 }
 
 function renderModal() {
-  const mainImg = document.getElementById("modalMainImg");
+  const wrap = document.getElementById("modalImgWrap");
   const counter = document.getElementById("modalCounter");
   const thumbsContainer = document.getElementById("modalThumbs");
+  const src = currentImages[currentIndex];
 
-  // Imagen principal
-  mainImg.src = currentImages[currentIndex];
-  mainImg.alt = "Project image " + (currentIndex + 1);
+  // Pausar vídeo anterior si lo hay
+  const oldVideo = wrap.querySelector("video");
+  if (oldVideo) oldVideo.pause();
+
+  // Renderizar imagen o vídeo
+  if (isVideo(src)) {
+    wrap.innerHTML = `<video controls autoplay loop style="max-width:100%;max-height:100%;border-radius:8px;"><source src="${src}" type="video/mp4"></video>`;
+  } else {
+    wrap.innerHTML = `<img src="${src}" alt="Project image ${currentIndex + 1}" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;" />`;
+  }
 
   // Contador
   counter.textContent = (currentIndex + 1) + " / " + currentImages.length;
 
   // Miniaturas
   thumbsContainer.innerHTML = "";
-  currentImages.forEach(function(src, i) {
-    const thumb = document.createElement("img");
-    thumb.src = src;
-    thumb.alt = "Thumbnail " + (i + 1);
-    thumb.className = "modal-thumb" + (i === currentIndex ? " active" : "");
+  currentImages.forEach(function(s, i) {
+    let thumb;
+    if (isVideo(s)) {
+      thumb = document.createElement("div");
+      thumb.className = "modal-thumb modal-thumb-video" + (i === currentIndex ? " active" : "");
+      thumb.innerHTML = "▶";
+    } else {
+      thumb = document.createElement("img");
+      thumb.src = s;
+      thumb.alt = "Thumbnail " + (i + 1);
+      thumb.className = "modal-thumb" + (i === currentIndex ? " active" : "");
+    }
     thumb.onclick = function() {
       currentIndex = i;
       renderModal();
@@ -218,6 +239,8 @@ function changeSlide(direction) {
 }
 
 function closeModal() {
+  const video = document.querySelector("#modalImgWrap video");
+  if (video) video.pause();
   document.getElementById("modal").classList.remove("open");
   document.body.style.overflow = "";
 }
@@ -228,7 +251,6 @@ function closeModalOutside(event) {
   }
 }
 
-// Cerrar modal con tecla Escape y navegar con flechas del teclado
 document.addEventListener("keydown", function(e) {
   const modal = document.getElementById("modal");
   if (!modal.classList.contains("open")) return;

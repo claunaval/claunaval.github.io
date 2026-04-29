@@ -528,6 +528,27 @@ body {
 }
 .modal-thumb:hover { opacity: 0.85; }
 
+.modal-thumb-video {
+  width: 64px;
+  height: 42px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.5;
+  border: 2px solid transparent;
+  transition: opacity 0.2s, border-color 0.2s;
+  background: #333;
+  color: var(--blanco);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+}
+.modal-thumb-video.active {
+  opacity: 1;
+  border-color: var(--fucsia);
+}
+.modal-thumb-video:hover { opacity: 0.85; }
+
 /* ── HAMBURGUESA ── */
 .menu-toggle {
   display: none;
