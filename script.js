@@ -1,7 +1,4 @@
 // ── DATOS DE LOS PROYECTOS ──
-// Para vídeos, añade la ruta del .mp4 en el array de imágenes donde quieras que aparezca.
-// El modal detecta automáticamente si es vídeo o imagen.
-
 const projectData = {
   concept: [
     {
@@ -83,7 +80,7 @@ const projectData = {
       title: "Love potion",
       images: [
         "images/modeling/project3/cover.jpg",
-        "images/modeling/project3/video.mp4"
+        "images/modeling/project3/video.mp4",
         "images/modeling/project3/img3.jpg",
         "images/modeling/project3/img4.jpg",
         "images/modeling/project3/img5.jpg",
@@ -186,43 +183,36 @@ let currentImages = [];
 let currentIndex = 0;
 
 function isVideo(src) {
-  return src.match(/\.(mp4|webm|ogg)$/i);
+  return /\.(mp4|webm|ogg)$/i.test(src);
 }
 
 function openModal(category, projectIndex) {
-  const project = projectData[category][projectIndex];
-  currentImages = project.images;
+  currentImages = projectData[category][projectIndex].images;
   currentIndex = 0;
   renderModal();
-  const modal = document.getElementById("modal");
-  modal.classList.add("open");
+  document.getElementById("modal").classList.add("open");
   document.body.style.overflow = "hidden";
 }
 
 function renderModal() {
-  const wrap = document.getElementById("modalImgWrap");
-  const counter = document.getElementById("modalCounter");
-  const thumbsContainer = document.getElementById("modalThumbs");
-  const src = currentImages[currentIndex];
+  var wrap = document.getElementById("modalImgWrap");
+  var src = currentImages[currentIndex];
 
-  // Pausar vídeo anterior si lo hay
-  const oldVideo = wrap.querySelector("video");
+  var oldVideo = wrap.querySelector("video");
   if (oldVideo) oldVideo.pause();
 
-  // Renderizar imagen o vídeo
   if (isVideo(src)) {
-    wrap.innerHTML = `<video controls autoplay loop style="max-width:100%;max-height:100%;border-radius:8px;"><source src="${src}" type="video/mp4"></video>`;
+    wrap.innerHTML = '<video controls autoplay loop style="max-width:100%;max-height:100%;border-radius:8px;"><source src="' + src + '" type="video/mp4"></video>';
   } else {
-    wrap.innerHTML = `<img src="${src}" alt="Project image ${currentIndex + 1}" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;" />`;
+    wrap.innerHTML = '<img src="' + src + '" alt="Project image" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;" />';
   }
 
-  // Contador
-  counter.textContent = (currentIndex + 1) + " / " + currentImages.length;
+  document.getElementById("modalCounter").textContent = (currentIndex + 1) + " / " + currentImages.length;
 
-  // Miniaturas
+  var thumbsContainer = document.getElementById("modalThumbs");
   thumbsContainer.innerHTML = "";
   currentImages.forEach(function(s, i) {
-    let thumb;
+    var thumb;
     if (isVideo(s)) {
       thumb = document.createElement("div");
       thumb.className = "modal-thumb modal-thumb-video" + (i === currentIndex ? " active" : "");
@@ -233,10 +223,7 @@ function renderModal() {
       thumb.alt = "Thumbnail " + (i + 1);
       thumb.className = "modal-thumb" + (i === currentIndex ? " active" : "");
     }
-    thumb.onclick = function() {
-      currentIndex = i;
-      renderModal();
-    };
+    thumb.onclick = function() { currentIndex = i; renderModal(); };
     thumbsContainer.appendChild(thumb);
   });
 }
@@ -247,21 +234,18 @@ function changeSlide(direction) {
 }
 
 function closeModal() {
-  const video = document.querySelector("#modalImgWrap video");
+  var video = document.querySelector("#modalImgWrap video");
   if (video) video.pause();
   document.getElementById("modal").classList.remove("open");
   document.body.style.overflow = "";
 }
 
 function closeModalOutside(event) {
-  if (event.target === document.getElementById("modal")) {
-    closeModal();
-  }
+  if (event.target === document.getElementById("modal")) closeModal();
 }
 
 document.addEventListener("keydown", function(e) {
-  const modal = document.getElementById("modal");
-  if (!modal.classList.contains("open")) return;
+  if (!document.getElementById("modal").classList.contains("open")) return;
   if (e.key === "Escape") closeModal();
   if (e.key === "ArrowRight") changeSlide(1);
   if (e.key === "ArrowLeft") changeSlide(-1);
@@ -269,27 +253,19 @@ document.addEventListener("keydown", function(e) {
 
 // ── BOTÓN VOLVER ARRIBA ──
 window.onscroll = function() {
-  const button = document.getElementById("toTop");
-  if (document.documentElement.scrollTop > 300) {
-    button.style.display = "block";
-  } else {
-    button.style.display = "none";
-  }
+  var button = document.getElementById("toTop");
+  button.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
 };
 
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("toTop").onclick = function() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-});
+document.getElementById("toTop").onclick = function() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 // ── MENÚ HAMBURGUESA ──
 function toggleMenu() {
-  const menu = document.getElementById("navList");
-  menu.classList.toggle("active");
+  document.getElementById("navList").classList.toggle("active");
 }
 
 function closeMenu() {
-  const menu = document.getElementById("navList");
-  menu.classList.remove("active");
+  document.getElementById("navList").classList.remove("active");
 }
