@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .banner-subtitle {
   font-size: 1.5em;
-  color: var(--fucsia);
+  color: var(--blanco);
   margin: 0 0 30px;
 }
 .banner-cta {
@@ -118,8 +118,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: background 0.3s, color 0.3s;
 }
 .banner-cta:hover {
-  background: var(--fucsia);
+  background: var(--azul);
   color: var(--blanco);
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* ── VIDEO ── */
