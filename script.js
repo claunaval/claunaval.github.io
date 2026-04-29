@@ -13,15 +13,19 @@ const projectData = {
         "images/concept/project1/img3.jpg",
         "images/concept/project1/img4.jpg",
         "images/concept/project1/img5.jpg",
-        "images/concept/project1/img6.jpg"
+        "images/concept/project1/img6.jpg",
+        "images/concept/project1/img7.jpg", 
+        "images/concept/project1/img8.jpg"
       ]
     },
     {
       title: '"Sueño"',
       images: [
         "images/concept/project2/cover.jpg",
-        "images/concept/project2/img2.jpg",
-        "images/concept/project2/img3.jpg", 
+        "images/concept/project2/img5.jpg",
+        "images/concept/project2/img6.jpg",
+        "images/concept/project2/img3.jpg",
+        "images/concept/project2/img2.jpg", 
         "images/concept/project2/img4.jpg"
       ]
     },
