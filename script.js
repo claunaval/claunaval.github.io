@@ -266,4 +266,3 @@ function toggleMenu() {
 function closeMenu() {
   document.getElementById("navList").classList.remove("active");
 }
-
