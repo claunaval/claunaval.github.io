@@ -103,13 +103,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .banner-subtitle {
   font-size: 1.5em;
-  color: var(--blanco);
+  color: var(--fucsia);
   margin: 0 0 30px;
 }
 .banner-cta {
   display: inline-block;
-  color: var(--fucsia);
+  color: var(--blanco);
   border: 2px solid var(--fucsia);
+  background: var(--fucsia);
   padding: 12px 30px;
   border-radius: 30px;
   text-decoration: none;
@@ -120,6 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 .banner-cta:hover {
   background: var(--azul);
   color: var(--blanco);
+  border: 2px solid var(--azul);
   transform: scale(1.1);
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
