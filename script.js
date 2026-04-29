@@ -97,10 +97,7 @@ const projectData = {
     {
       title: "Barriletes",
       images: [
-        "images/modeling/project5/cover.jpg",
-        "images/modeling/project5/img2.jpg",
-        "images/modeling/project5/img3.jpg",
-        "images/modeling/project5/video.mp4"
+        "images/modeling/project5/cover.jpg"
       ]
     }
   ],
