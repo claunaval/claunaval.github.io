@@ -266,3 +266,14 @@ function toggleMenu() {
 function closeMenu() {
   document.getElementById("navList").classList.remove("active");
 }
+
+const cursor = document.querySelector('.cursor');
+const dot = document.querySelector('.cursor-dot');
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+
+  dot.style.left = e.clientX + 'px';
+  dot.style.top = e.clientY + 'px';
+});
