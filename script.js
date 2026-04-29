@@ -84,6 +84,10 @@ const projectData = {
       images: [
         "images/modeling/project3/cover.jpg",
         "images/modeling/project3/video.mp4"
+        "images/modeling/project3/img3.jpg",
+        "images/modeling/project3/img4.jpg",
+        "images/modeling/project3/img5.jpg",
+        "images/modeling/project3/img2.jpg"
       ]
     },
     {
