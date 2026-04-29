@@ -8,12 +8,18 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* TEXTO GENERAL */
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
   background-color: var(--blanco);
   color: var(--negro);
 }
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
 
 /* ── NAVBAR ── */
 .navbar {
