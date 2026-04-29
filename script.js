@@ -59,19 +59,22 @@ const projectData = {
         "images/modeling/project1/cover.jpg",
         "images/modeling/project1/img2.jpg",
         "images/modeling/project1/img3.jpg",
+        "images/modeling/project1/video.mp4",
         "images/modeling/project1/img5.jpg",
         "images/modeling/project1/img6.jpg",
         "images/modeling/project1/img7.jpg",
         "images/modeling/project1/img8.jpg",
         "images/modeling/project1/img9.jpg",
-        "images/modeling/project1/img4.jpg", 
-        "images/modeling/project1/video.mp4"
+        "images/modeling/project1/img4.jpg"
       ]
     },
     {
       title: "CCTV",
       images: [
         "images/modeling/project2/cover.jpg",
+        "images/modeling/project2/img2.jpg",
+        "images/modeling/project2/img3.jpg",
+        "images/modeling/project2/img4.jpg",
         "images/modeling/project2/video.mp4"
       ]
     },
