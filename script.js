@@ -75,6 +75,7 @@ const projectData = {
         "images/modeling/project2/img2.jpg",
         "images/modeling/project2/img3.jpg",
         "images/modeling/project2/img4.jpg",
+        "images/modeling/project2/img5.jpg",
         "images/modeling/project2/video.mp4"
       ]
     },
