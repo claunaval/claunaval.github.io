@@ -57,7 +57,6 @@ const projectData = {
       title: "Ramen stall",
       images: [
         "images/modeling/project1/cover.jpg",
-        "images/modeling/project1/video.mp4",
         "images/modeling/project1/img2.jpg",
         "images/modeling/project1/img3.jpg",
         "images/modeling/project1/img5.jpg",
@@ -65,7 +64,8 @@ const projectData = {
         "images/modeling/project1/img7.jpg",
         "images/modeling/project1/img8.jpg",
         "images/modeling/project1/img9.jpg",
-        "images/modeling/project1/img4.jpg"
+        "images/modeling/project1/img4.jpg", 
+        "images/modeling/project1/video.mp4"
       ]
     },
     {
@@ -93,9 +93,9 @@ const projectData = {
       title: "Barriletes",
       images: [
         "images/modeling/project5/cover.jpg",
-        "images/modeling/project5/video.mp4",
         "images/modeling/project5/img2.jpg",
-        "images/modeling/project5/img3.jpg"
+        "images/modeling/project5/img3.jpg",
+        "images/modeling/project5/video.mp4"
       ]
     }
   ],
